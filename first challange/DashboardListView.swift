@@ -13,8 +13,6 @@ struct DashboardListView: View {
         let id = UUID()
         var money : Double
         
-        
-      
     }
 
     private var action = [
@@ -27,27 +25,12 @@ struct DashboardListView: View {
     var body: some View {
         NavigationView{
             VStack {
-               
-                
-                
-                
                 List(action) { action in
-                        HStack {                            
-                            Text(action.name)
-                            Spacer()
-                            Text(String(action.money))
-                        }
-                               
-                        
-                            
+                        TransactionItemView(action: action)
                     }
-                
-                
-                    
             }
             .navigationTitle("Latest Actions")
         }
-        
     }
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		084F7C9E2908227A00D85382 /* CategoryImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F7C9D2908227A00D85382 /* CategoryImageView.swift */; };
 		6DF7C6DB2906CCF400FF95FF /* DashboardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7C6DA2906CCF400FF95FF /* DashboardListView.swift */; };
 		6DF7C6DD29081CE400FF95FF /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7C6DC29081CE400FF95FF /* Images.swift */; };
 		6E9522602906C4750059634A /* first_challangeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E95225F2906C4750059634A /* first_challangeApp.swift */; };
@@ -18,6 +19,7 @@
 		6E95227D2906C4760059634A /* first_challangeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E95227C2906C4760059634A /* first_challangeUITestsLaunchTests.swift */; };
 		6E95228C2906CF610059634A /* DashboardCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E95228B2906CF610059634A /* DashboardCircleButton.swift */; };
 		6E95228E29080D4A0059634A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E95228D29080D4A0059634A /* Colors.swift */; };
+		6E95229029081E110059634A /* TransactionItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E95228F29081E110059634A /* TransactionItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		084F7C9D2908227A00D85382 /* CategoryImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryImageView.swift; sourceTree = "<group>"; };
 		6DF7C6DA2906CCF400FF95FF /* DashboardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardListView.swift; sourceTree = "<group>"; };
 		6DF7C6DC29081CE400FF95FF /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		6E95225C2906C4750059634A /* first challange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "first challange.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +55,7 @@
 		6E95227C2906C4760059634A /* first_challangeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = first_challangeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6E95228B2906CF610059634A /* DashboardCircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCircleButton.swift; sourceTree = "<group>"; };
 		6E95228D29080D4A0059634A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		6E95228F29081E110059634A /* TransactionItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,8 @@
 				6E95228B2906CF610059634A /* DashboardCircleButton.swift */,
 				6E95228D29080D4A0059634A /* Colors.swift */,
 				6DF7C6DC29081CE400FF95FF /* Images.swift */,
+				6E95228F29081E110059634A /* TransactionItemView.swift */,
+				084F7C9D2908227A00D85382 /* CategoryImageView.swift */,
 			);
 			path = "first challange";
 			sourceTree = "<group>";
@@ -269,9 +275,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E95229029081E110059634A /* TransactionItemView.swift in Sources */,
 				6DF7C6DB2906CCF400FF95FF /* DashboardListView.swift in Sources */,
 				6DF7C6DD29081CE400FF95FF /* Images.swift in Sources */,
 				6E9522622906C4750059634A /* ContentView.swift in Sources */,
+				084F7C9E2908227A00D85382 /* CategoryImageView.swift in Sources */,
 				6E95228E29080D4A0059634A /* Colors.swift in Sources */,
 				6E95228C2906CF610059634A /* DashboardCircleButton.swift in Sources */,
 				6E9522602906C4750059634A /* first_challangeApp.swift in Sources */,
