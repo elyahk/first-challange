@@ -35,7 +35,6 @@ extension Color {
 }
 
 struct DashboardCircleButton:  View {
-    
     @State var circleTapped = true
     @State var circlePressed = false
     
