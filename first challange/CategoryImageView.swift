@@ -1,12 +1,12 @@
 //
-//  SwiftUIView.swift
+//  CategoryImageView.swift
 //  first challange
 //
 //  Created by Gennaro Caccavallo on 25/10/22.
 //
 
 import SwiftUI
-struct ContentView2: View {
+struct CategoryImageView: View {
     var body: some View {
         ZStack {
             
@@ -20,8 +20,8 @@ struct ContentView2: View {
         }
     }
 }
-struct ContentView2_Previews: PreviewProvider {
+struct CategoryImageView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView2()
+        CategoryImageView()
     }
 }
