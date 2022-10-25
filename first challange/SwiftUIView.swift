@@ -11,7 +11,7 @@ struct ContentView2: View {
         ZStack {
             
             RoundedRectangle(cornerRadius: 10, style: .continuous)
-                .fill(Color(hex: ))
+                .fill(Color(hex: .main_red_color))
                 .frame(width: 45, height: 45)
             Image(systemName: "house.fill")
                 .foregroundColor(.white)
