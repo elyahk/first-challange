@@ -20,6 +20,7 @@
 		6E95228C2906CF610059634A /* DashboardCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E95228B2906CF610059634A /* DashboardCircleButton.swift */; };
 		6E95228E29080D4A0059634A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E95228D29080D4A0059634A /* Colors.swift */; };
 		6E95229029081E110059634A /* TransactionItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E95228F29081E110059634A /* TransactionItemView.swift */; };
+		6E952292290823C40059634A /* CategoryImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E952291290823C40059634A /* CategoryImageModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		6E95228B2906CF610059634A /* DashboardCircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCircleButton.swift; sourceTree = "<group>"; };
 		6E95228D29080D4A0059634A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		6E95228F29081E110059634A /* TransactionItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionItemView.swift; sourceTree = "<group>"; };
+		6E952291290823C40059634A /* CategoryImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryImageModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				6DF7C6DC29081CE400FF95FF /* Images.swift */,
 				6E95228F29081E110059634A /* TransactionItemView.swift */,
 				084F7C9D2908227A00D85382 /* CategoryImageView.swift */,
+				6E952291290823C40059634A /* CategoryImageModel.swift */,
 			);
 			path = "first challange";
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				084F7C9E2908227A00D85382 /* CategoryImageView.swift in Sources */,
 				6E95228E29080D4A0059634A /* Colors.swift in Sources */,
 				6E95228C2906CF610059634A /* DashboardCircleButton.swift in Sources */,
+				6E952292290823C40059634A /* CategoryImageModel.swift in Sources */,
 				6E9522602906C4750059634A /* first_challangeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

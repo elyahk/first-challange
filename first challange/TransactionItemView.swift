@@ -17,8 +17,7 @@ struct TransactionItemView: View {
     var body: some View {
         ZStack {
             HStack {
-                Image(systemName: "house")
-                    .font(.system(size: 25.0))
+                CategoryImageView(model: action.category)
                 VStack(alignment: .leading) {
                     Text(action.name)
                         .font(.system(size: 17.0, weight: .semibold))
@@ -40,6 +39,6 @@ struct TransactionItemView: View {
 
 struct TransactionItemView_Previews: PreviewProvider {
     static var previews: some View {
-        TransactionItemView(action: .init(name: "Hello baby", money: 100.0))
+        TransactionItemView(action: .init(name: "Hello baby", money: 100.0, category: CategoryImageModel(image: "bell", color: .main_red_color)))
     }
 }

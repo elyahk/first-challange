@@ -7,13 +7,19 @@
 
 import SwiftUI
 struct CategoryImageView: View {
+    let model: CategoryImageModel
+    
+    init(model: CategoryImageModel) {
+        self.model = model
+    }
+    
     var body: some View {
         ZStack {
             
             RoundedRectangle(cornerRadius: 10, style: .continuous)
-                .fill(Color(hex: .main_red_color))
+                .fill(Color(hex: model.color))
                 .frame(width: 45, height: 45)
-            Image(systemName: "house.fill")
+            Image(systemName: model.image)
                 .foregroundColor(.white)
 
             
@@ -22,6 +28,6 @@ struct CategoryImageView: View {
 }
 struct CategoryImageView_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryImageView()
+        CategoryImageView(model: CategoryImageModel(image: "bell", color: .main_red_color))
     }
 }
