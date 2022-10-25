@@ -13,6 +13,7 @@ struct DashboardListView: View {
         let id = UUID()
         var money : Double
         
+        
       
     }
 
@@ -32,6 +33,8 @@ struct DashboardListView: View {
                 
                 List(action) { action in
                         HStack {
+                            Image
+                            
                             Text(action.name)
                             Spacer()
                             Text(String(action.money))
