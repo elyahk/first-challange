@@ -13,8 +13,6 @@ struct DashboardListView: View {
         let id = UUID()
         var money : Double
         
-        
-      
     }
 
     private var action = [
@@ -28,23 +26,7 @@ struct DashboardListView: View {
         NavigationView{
             VStack {
                 List(action) { action in
-                        HStack {
-                            Image(systemName: "house")
-                                .font(.system(size: 25.0))
-                            VStack(alignment: .leading) {
-                                Text(action.name)
-                                    .font(.system(size: 17.0, weight: .semibold))
-                                    .multilineTextAlignment(.leading)
-                                Text(action.name)
-                                    .font(.system(size: 15.0, weight: .regular))
-                                    .multilineTextAlignment(.leading)
-                            }
-                            .padding(.init(top: 0.0, leading: 10.0, bottom: 0.0, trailing: 5.0))
-                            Spacer()
-                            Text(String(action.money))
-                                .font(.system(size: 17.0, weight: .regular))
-                                .foregroundColor(Color(hex: .main_red_color))
-                        }
+                        TransactionItemView(action: action)
                     }
             }
             .navigationTitle("Latest Actions")
