@@ -32,9 +32,7 @@ struct DashboardListView: View {
                 
                 
                 List(action) { action in
-                        HStack {
-                            Image
-                            
+                        HStack {                            
                             Text(action.name)
                             Spacer()
                             Text(String(action.money))
