@@ -11,18 +11,17 @@ struct CategoryListView: View {
     var body: some View {
         NavigationView{
         ScrollView(.vertical, showsIndicators: false) {
-            ForEach(0..<cell.row){ i in
+            ForEach(0 ..< cell.row){ i in
                 HStack(alignment: .center, spacing: cell.spacing){
-                    ForEach(0..<cell.column){ j in
-                        
+                    ForEach(0 ..< cell.column){ j in
                         CollectionViewCell(row: i, column: j)
-                        
                     }
-                    
-                }.padding(.bottom, 10)
+                }
+                .padding(.bottom, 10)
             }
-        }.navigationBarTitle("Category")
-                .scrollDisabled(true)
+        }
+        .navigationBarTitle("Category")
+        .scrollDisabled(true)
         }
     }
 }

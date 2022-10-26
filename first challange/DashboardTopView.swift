@@ -7,59 +7,99 @@
 
 import SwiftUI
 
+let screenWidth = UIScreen.main.bounds.width
+let scrennHeight = UIScreen.main.bounds.height
+
+func universalHeight(height: CGFloat) -> CGFloat {
+    scrennHeight / 844.0 * height
+}
+
+func universalWidth(width: CGFloat) -> CGFloat {
+    screenWidth / 390.0 * width
+}
+
+struct DashboardTopView2: View {
+    var body: some View {
+        VStack {
+           VStack {
+                Text("Your are resfnjskd fjksa ksjfksdjk")
+                   .padding()
+                Text("500 $")
+                   .padding()
+                   .background {
+                       Rectangle()
+                           .fill(Color.white)
+                   }
+                DashboardTopSummaryView()
+                   .padding()
+                   .padding([.leading, .trailing], 20)
+                DashboardTopSummaryView()
+                   .padding([.leading, .trailing, .bottom])
+                   .padding([.leading, .trailing], 20)
+            }
+           .frame(maxWidth: .infinity)
+           .background {
+               Rectangle()
+                   .fill(Color.green)
+           }
+            
+            Spacer()
+        }
+    }
+}
+
+
+
 struct DashboardTopView: View {
     var body: some View {
-        ZStack{
-            RoundedRectangle(cornerRadius: 25)
-                .fill(Color(red: 0.7490196078431373, green: 0.8627450980392157, blue: 0.6823529411764706))
-                .frame(
-                    width:UIScreen.main.bounds.width,
-                    height:450
-                )
-                .position(x:197,y:99)
-            
-            Text("You are reaching your target")
-                .position(x:197,y:50)
-            
-            Text("500 $")
-                .fontWeight(.black)
-                .position(x:197,y:100)
-            
-            ZStack{
-                RoundedRectangle(cornerRadius: 15)
-                    .fill(.white)
-                    .frame(width:270, height: 65)
-                    .position(x:197,y:170)
+        VStack {
+            ZStack {
+                RoundedRectangle(cornerRadius: 25)
+                    .fill(Color(red: 0.7490196078431373, green: 0.8627450980392157, blue: 0.6823529411764706))
+                    .frame(
+                        width: screenWidth,
+                        height: universalHeight(height: 450)
+                    )
+                    .offset(y: -universalHeight(height: 100))
                 
-                Text("Incomes")
-                    .position(x:197,y:170)
-
-                Text("200 $")
-                    .position(x:280,y:170)
-                Image("IncomeIcon")
-                    .position(x:110,y:170)
+                VStack {
+                    VStack {
+                        Text("You are reaching your target")
+                            .font(.system(size: 25, weight: .light))
+                        Text("500 $")
+                            .font(.system(size: 25, weight: .light))
+                            .fontWeight(.black)
+                    }
+                    .padding(.top, 40)
+                        DashboardTopSummaryView()
+                            .frame(height: 60)
+                            .padding(.top, 20)
+                            .padding(.leading, 50)
+                            .padding(.trailing, 50)
+                        
+                        DashboardTopSummaryView()
+                            .padding(.top, 40)
+                            .frame(height: 60)
+                            .padding(.leading, 50)
+                            .padding(.trailing, 50)
                     
+                    Spacer()
+                }
             }
-            ZStack{
-                RoundedRectangle(cornerRadius: 15)
-                    .fill(.white)
-                    .frame(width:270, height: 65)
-                    .position(x:197,y:250)
-                Text("Expences")
-                    .position(x:197,y:250)
-                Text("200 $")
-                    .position(x:280,y:250)
-                Image("IncomeIcon")
-                    .position(x:110,y:250)
-            }
+            Spacer()
+                        
+          
 
-                
         }
+        
     }
 }
 
 struct DashboardTopView_Previews: PreviewProvider {
     static var previews: some View {
-        DashboardTopView()
+        Group {
+            DashboardTopView2()
+                .previewDevice("iPhone 14 Plus")
+        }
     }
 }
