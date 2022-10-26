@@ -20,9 +20,12 @@ struct CollectionViewCell: View {
               RoundedRectangle(cornerRadius: 10)
                   .fill(color.lightGreen)
                   .frame(width: cell.width, height: cell.width)
-              Text("\(self.index)").foregroundColor(.white).font(.largeTitle)
+              Image(systemName: "house")
+                  .foregroundColor(.white)
+                  .font(.largeTitle)
               
-          }.onTapGesture {
+              
+          } .onTapGesture {
                   print("\(self.index)")
           }
         
