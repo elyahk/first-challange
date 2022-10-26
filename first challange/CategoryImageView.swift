@@ -18,8 +18,9 @@ struct CategoryImageView: View {
             
             RoundedRectangle(cornerRadius: 10, style: .continuous)
                 .fill(Color(hex: model.color))
-                .frame(width: 45, height: 45)
+                .frame(width: 72, height: 72)
             Image(systemName: model.image)
+                .font(.title)
                 .foregroundColor(.white)
 
             
