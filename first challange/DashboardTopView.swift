@@ -30,7 +30,9 @@ struct DashboardTopView2: View {
                     .padding([.leading, .trailing], universalHeight(height: 20))
                     .padding([.top, .bottom], universalHeight(height: 10))
                     .background {
-                        RoundedRectangle(cornerRadius: 25, style: .continuous)      .fill(Color(hex: "FCFCFE"))
+                        RoundedRectangle(cornerRadius: 15, style: .continuous)
+                            .fill(Color(hex: "FCFCFE"))
+                            .frame(width: 150, height: 45)
                     }
                 DashboardTopSummaryView()
                 

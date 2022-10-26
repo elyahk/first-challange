@@ -13,15 +13,20 @@ struct DashboardTopSummaryView: View {
             HStack {
                 Image("IncomeIcon")
                 Text("Incomes")
+                    .font(.system(size: 24))
+                    .fontWeight(.medium)
                     .padding([.leading])
                 Spacer()
                 Text("200 $")
+                    .font(.system(size: 24))
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.red)
             }
             .padding([.leading, .trailing])
-            .frame(height: universalHeight(height: 60))
+            .frame(height: universalHeight(height: 65))
         }
         .background {
-            Rectangle()
+            RoundedRectangle(cornerRadius: 15)
                 .fill(Color(hex: "FCFCFE"))
         }
     }
@@ -30,6 +35,6 @@ struct DashboardTopSummaryView: View {
 struct DashboardTopSummaryView_Previews: PreviewProvider {
     static var previews: some View {
         DashboardTopSummaryView()
-            .background(Color.green)
+            
     }
 }
