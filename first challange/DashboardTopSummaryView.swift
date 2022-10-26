@@ -10,6 +10,7 @@ import SwiftUI
 struct DashboardTopSummaryView: View {
     var body: some View {
         VStack{
+            
             HStack {
                 Image("IncomeIcon")
                 Text("Incomes")
