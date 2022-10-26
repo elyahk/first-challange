@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HistoryView: View {
     var body: some View {
+        Text("sfsafds")
 //        history search bar
 //        segment control
 //        dashboard list view

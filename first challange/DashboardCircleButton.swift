@@ -39,20 +39,20 @@ struct DashboardCircleButton: View {
     @State var circlePressed = false
     
     var body: some View {
-        ZStack {
+        VStack {
             Image(systemName: "plus")
                 .foregroundColor(Color(hex: .white_color))
                 .font(.system(size: 40, weight: .light))
 //                .offset(x: circlePressed ? -90 : 0, y: circlePressed ? -90 : 0)
-                .rotation3DEffect(Angle(degrees: circlePressed ? 20 : 0),
-                                        axis: (x: 10, y: -10, z: 0))
+//                .rotation3DEffect(Angle(degrees: circlePressed ? 20 : 0),
+//                                        axis: (x: 10, y: -10, z: 0))
         }
         .frame(width: 60, height: 60)
         .background(
             ZStack {
                 Circle()
                     .fill(Color(hex: .dashboard_plus_button_main_color))
-                    .frame(width: 100, height: 100)//Button Size.
+                    .frame(width: 80, height: 80)//Button Size.
                     .shadow(color: Color("LightShadow"), radius: 8, x: -8, y: -8)
                     .shadow(color: Color("DarkShadow"), radius: 8, x: 8, y: 8)
             }
