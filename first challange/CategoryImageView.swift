@@ -16,7 +16,7 @@ struct CategoryImageView: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 10, style: .continuous)
-                .fill(Color(model.color))
+                .fill(Color(hex: model.color))
             Image(systemName: model.image)
                 .foregroundColor(.white)
         }
