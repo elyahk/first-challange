@@ -19,6 +19,7 @@ struct TransactionItemView: View {
             CategoryImageView(model: action.category)
                 .frame(width: universalWidth(width: 45.0), height: universalWidth(width: 45.0))
                 .font(.title3)
+            
             VStack(alignment: .leading) {
                 Text(action.name)
                     .font(.system(size: 17.0, weight: .semibold))

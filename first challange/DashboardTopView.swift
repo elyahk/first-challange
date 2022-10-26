@@ -29,6 +29,8 @@ struct DashboardTopView2: View {
                 Text("500 $")
                     .padding([.leading, .trailing], universalHeight(height: 20))
                     .padding([.top, .bottom], universalHeight(height: 10))
+                    .font(.system(size: 24))
+                    .fontWeight(.black)
                     .background {
                         RoundedRectangle(cornerRadius: 15, style: .continuous)
                             .fill(Color(hex: "FCFCFE"))
