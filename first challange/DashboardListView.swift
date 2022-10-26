@@ -22,13 +22,17 @@ struct DashboardListView: View {
     ]
     
     var body: some View {
-        NavigationView{
-            VStack {
-                List(action) { action in
-                    TransactionItemView(action: action)
+        VStack {
+            List {
+                Section("Latest Action") {
+                    ForEach(action) { action in
+                        TransactionItemView(action: action)
                     }
+                }
+                .foregroundColor(Color.black)
+                .font(.system(size: 20.0, weight: .bold))
             }
-            .navigationTitle("Latest Actions")
+            .listStyle(.grouped)
         }
     }
 }
