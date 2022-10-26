@@ -23,9 +23,10 @@ struct DashboardTopView2: View {
         VStack {
             VStack {
                 Text("Your are resfnjskd fjksa ksjfksdjk")
-                    .padding()
+                    .padding([.top], universalHeight(height: 20))
                 Text("500 $")
-                    .padding()
+                    .padding([.leading, .trailing], universalHeight(height: 20))
+                    .padding([.top, .bottom], universalHeight(height: 10))
                     .background {
                         Rectangle()
                             .fill(Color.white)

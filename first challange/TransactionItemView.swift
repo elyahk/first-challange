@@ -17,7 +17,7 @@ struct TransactionItemView: View {
     var body: some View {
         HStack {
             CategoryImageView(model: action.category)
-                .frame(width: 45, height: 45)
+                .frame(width: universalWidth(width: 45.0), height: universalWidth(width: 45.0))
                 .font(.title3)
             VStack(alignment: .leading) {
                 Text(action.name)

@@ -13,7 +13,7 @@ struct DashbordView: View {
             DashboardTopView2()
             
             DashboardListView()
-                .frame(height: universalHeight(height: 300.0))
+                .frame(minHeight: universalHeight(height: 250.0))
             Spacer()
             DashboardCircleButton()
             Spacer()

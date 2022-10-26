@@ -18,7 +18,7 @@ struct DashboardTopSummaryView: View {
                 Text("200 $")
             }
             .padding([.leading, .trailing])
-            .frame(height: 60)
+            .frame(height: universalHeight(height: 60))
         }
         .background {
             Rectangle()

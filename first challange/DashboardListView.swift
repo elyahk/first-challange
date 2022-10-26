@@ -32,9 +32,14 @@ struct DashboardListView: View {
                 .foregroundColor(Color.black)
                 .font(.system(size: 20.0, weight: .bold))
             }
-//            .background(Color.white)
-            .listStyle(.grouped)
+            .listStyle(.plain)
+            .onAppear {
+                // Set the default to clear
+                UITableView.appearance().backgroundColor = .white
+            }
+            .scrollDisabled(true)
         }
+        .background(Color.white)
     }
 }
 
