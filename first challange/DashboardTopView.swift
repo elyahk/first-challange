@@ -22,29 +22,30 @@ struct DashboardTopView2: View {
     var body: some View {
         VStack {
             VStack {
-                Text("Your are resfnjskd fjksa ksjfksdjk")
+                Text("You are reaching your target")
+                    .font(.system(size: 24))
+                    .fontWeight(.light)
                     .padding([.top], universalHeight(height: 20))
                 Text("500 $")
                     .padding([.leading, .trailing], universalHeight(height: 20))
                     .padding([.top, .bottom], universalHeight(height: 10))
                     .background {
-                        Rectangle()
-                            .fill(Color.white)
+                        RoundedRectangle(cornerRadius: 25, style: .continuous)      .fill(Color(hex: "FCFCFE"))
                     }
                 DashboardTopSummaryView()
-                    
+                
                     .padding([.leading, .trailing])
                     .padding([.leading, .trailing], 20)
-                    
+                
                 DashboardTopSummaryView()
-                    
+                
                     .padding([.leading, .trailing, .bottom])
                     .padding([.leading, .trailing], 20)
             }
             .frame(maxWidth: .infinity)
             .background {
                 Rectangle()
-                    .fill(Color.green)
+                    .fill(Color(hex: "BFDCAE"))
             }
         }
     }

@@ -22,7 +22,7 @@ struct DashboardTopSummaryView: View {
         }
         .background {
             Rectangle()
-                .fill(Color.white)
+                .fill(Color(hex: "FCFCFE"))
         }
     }
 }
