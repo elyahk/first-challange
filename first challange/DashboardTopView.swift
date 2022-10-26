@@ -21,29 +21,30 @@ func universalWidth(width: CGFloat) -> CGFloat {
 struct DashboardTopView2: View {
     var body: some View {
         VStack {
-           VStack {
+            VStack {
                 Text("Your are resfnjskd fjksa ksjfksdjk")
-                   .padding()
+                    .padding()
                 Text("500 $")
-                   .padding()
-                   .background {
-                       Rectangle()
-                           .fill(Color.white)
-                   }
+                    .padding()
+                    .background {
+                        Rectangle()
+                            .fill(Color.white)
+                    }
                 DashboardTopSummaryView()
-                   .padding()
-                   .padding([.leading, .trailing], 20)
+                    
+                    .padding([.leading, .trailing])
+                    .padding([.leading, .trailing], 20)
+                    
                 DashboardTopSummaryView()
-                   .padding([.leading, .trailing, .bottom])
-                   .padding([.leading, .trailing], 20)
+                    
+                    .padding([.leading, .trailing, .bottom])
+                    .padding([.leading, .trailing], 20)
             }
-           .frame(maxWidth: .infinity)
-           .background {
-               Rectangle()
-                   .fill(Color.green)
-           }
-            
-            Spacer()
+            .frame(maxWidth: .infinity)
+            .background {
+                Rectangle()
+                    .fill(Color.green)
+            }
         }
     }
 }
@@ -71,25 +72,25 @@ struct DashboardTopView: View {
                             .fontWeight(.black)
                     }
                     .padding(.top, 40)
-                        DashboardTopSummaryView()
-                            .frame(height: 60)
-                            .padding(.top, 20)
-                            .padding(.leading, 50)
-                            .padding(.trailing, 50)
-                        
-                        DashboardTopSummaryView()
-                            .padding(.top, 40)
-                            .frame(height: 60)
-                            .padding(.leading, 50)
-                            .padding(.trailing, 50)
+                    DashboardTopSummaryView()
+                        .frame(height: 60)
+                        .padding(.top, 20)
+                        .padding(.leading, 50)
+                        .padding(.trailing, 50)
+                    
+                    DashboardTopSummaryView()
+                        .padding(.top, 40)
+                        .frame(height: 60)
+                        .padding(.leading, 50)
+                        .padding(.trailing, 50)
                     
                     Spacer()
                 }
             }
             Spacer()
-                        
-          
-
+            
+            
+            
         }
         
     }

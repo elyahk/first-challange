@@ -12,13 +12,13 @@ struct DashboardTopSummaryView: View {
         VStack{
             HStack {
                 Image("IncomeIcon")
-                
                 Text("Incomes")
-                    .padding()
+                    .padding([.leading])
                 Spacer()
                 Text("200 $")
             }
-            .padding()
+            .padding([.leading, .trailing])
+            .frame(height: 60)
         }
         .background {
             Rectangle()

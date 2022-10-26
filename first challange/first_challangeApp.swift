@@ -11,7 +11,7 @@ import SwiftUI
 struct first_challangeApp: App {
     var body: some Scene {
         WindowGroup {
-            DashboardCircleButton()
+            DashbordView()
         }
     }
 }

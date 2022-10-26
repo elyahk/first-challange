@@ -13,8 +13,10 @@ struct DashbordView: View {
             DashboardTopView2()
             
             DashboardListView()
-            
+                .frame(height: universalHeight(height: 300.0))
+            Spacer()
             DashboardCircleButton()
+            Spacer()
         }
     }
 }
@@ -22,5 +24,6 @@ struct DashbordView: View {
 struct DashbordView_Previews: PreviewProvider {
     static var previews: some View {
         DashbordView()
+            .background(Color.white)
     }
 }

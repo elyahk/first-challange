@@ -43,7 +43,7 @@ struct DashboardCircleButton: View {
             Image(systemName: "plus")
                 .foregroundColor(Color(hex: .white_color))
                 .font(.system(size: 40, weight: .light))
-                .offset(x: circlePressed ? -90 : 0, y: circlePressed ? -90 : 0)
+//                .offset(x: circlePressed ? -90 : 0, y: circlePressed ? -90 : 0)
                 .rotation3DEffect(Angle(degrees: circlePressed ? 20 : 0),
                                         axis: (x: 10, y: -10, z: 0))
         }
