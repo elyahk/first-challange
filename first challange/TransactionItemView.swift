@@ -15,23 +15,22 @@ struct TransactionItemView: View {
     }
     
     var body: some View {
-        ZStack {
-            HStack {
-                CategoryImageView(model: action.category)
-                VStack(alignment: .leading) {
-                    Text(action.name)
-                        .font(.system(size: 17.0, weight: .semibold))
-                        .multilineTextAlignment(.leading)
-                    Text(action.name)
-                        .font(.system(size: 15.0, weight: .regular))
-                        .multilineTextAlignment(.leading)
-                }
-                .padding(.init(top: 0.0, leading: 10.0, bottom: 0.0, trailing: 5.0))
-                Spacer()
-                Text(String(action.money))
-                    .font(.system(size: 17.0, weight: .regular))
-                    .foregroundColor(Color(hex: .main_red_color))
+        HStack {
+            CategoryImageView(model: action.category)
+                .frame(width: 45, height: 45)
+                .font(.title3)
+            VStack(alignment: .leading) {
+                Text(action.name)
+                    .font(.system(size: 17.0, weight: .semibold))
+                    .multilineTextAlignment(.leading)
+                Text(action.name)
+                    .font(.system(size: 15.0, weight: .regular))
+                    .multilineTextAlignment(.leading)
             }
+            Spacer()
+            Text(String(action.money))
+                .font(.system(size: 17.0, weight: .regular))
+                .foregroundColor(Color(hex: .main_red_color))
         }
     }
 }
