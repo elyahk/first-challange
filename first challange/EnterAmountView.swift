@@ -12,14 +12,16 @@ struct EnterAmountView: View {
     var body: some View {
         VStack {
             Text("Enter your target")
-                .font(.largeTitle)
-            
-            
-            
+                .font(.title2)
+                .fontWeight(.bold)
+                .multilineTextAlignment(.leading)
+                .padding(.leading, -180.0)
+                
             ZStack {
                 Rectangle()
                     .fill(.white)
                     .frame(width: 392, height: 99)
+                    
                 
                 HStack {
                     Text("$")
@@ -37,12 +39,12 @@ struct EnterAmountView: View {
                 }
             }
         }
-        .padding()
     }
 }
 
 struct EnterAmountView_Previews: PreviewProvider {
     static var previews: some View {
         EnterAmountView()
+            
     }
 }
