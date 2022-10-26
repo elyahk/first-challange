@@ -15,5 +15,6 @@ extension String {
     static let main_green_color = "34C759"
     static let main_red_color = "FD0000"
     static let screen = "F2F2F7"
+    static let main_purple = "31179C"
 
 }
