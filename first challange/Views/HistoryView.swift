@@ -8,9 +8,6 @@
 import SwiftUI
 
 struct HistoryView: View {
-    //        history search bar
-    //        segment control
-    //        dashboard list view
     @State var segmentedChoice = 0
     var body: some View {
         VStack{

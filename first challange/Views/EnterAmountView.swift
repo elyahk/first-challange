@@ -8,42 +8,47 @@
 import SwiftUI
 
 struct EnterAmountView: View {
+    @State var shouldShowTitle: Bool
+    @State var title: String
+    @State var amount: String
+    
+    init(shouldShowTitle: Bool, title: String, amount: String) {
+        self.shouldShowTitle = shouldShowTitle
+        self.title = title
+        self.amount = amount
+    }
+    
     var body: some View {
         VStack {
-            Text("Enter your target")
-                .font(.title2)
-                .fontWeight(.bold)
-                .multilineTextAlignment(.leading)
-                .padding(.leading, -180.0)
-                
-            ZStack {
-                Rectangle()
-                    .fill(.white)
-                    .frame(width: 392, height: 99)
-                    
-                
-                HStack {
-                    Text("$")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .frame(width: 51, height: 78)
-                    Spacer()
-                    
-                    Text("10")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .frame(width: 51, height: 78)
-                    
-                    
-                }
+            if shouldShowTitle {
+                Text(title)
+                    .font(.title2)
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.leading)
+                    .padding(.leading, -180.0)
             }
+            
+            HStack {
+                Text("$")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .frame(width: 51, height: 78)
+                Spacer()
+                
+                TextField("Enter something", text: $amount)
+                    .background(Color.clear)
+                    .multilineTextAlignment(.trailing)
+                    .font(.system(size: 38.0, weight: .bold))
+                    .padding([.trailing], 20)
+            }
+            .background(Color.white)
         }
+        .background(Color.clear)
     }
 }
 
 struct EnterAmountView_Previews: PreviewProvider {
     static var previews: some View {
-        EnterAmountView()
-            
+        EnterAmountView(shouldShowTitle: true, title: "Title", amount: "100.0")
     }
 }

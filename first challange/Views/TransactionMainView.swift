@@ -8,23 +8,49 @@
 import SwiftUI
 
 struct TransactionMainView: View {
-    var body: some View {
-            NavigationStack {
-                List {
-                    Text("Hello, SwiftUI!")
-                }
-                .navigationTitle("Navigation Title")
-                .toolbar {
-                    Button("Add") {}
-                }
-                .toolbarColorScheme(.dark, for: .navigationBar)
+    @State var segmentedChoice = 0
 
-                .toolbarBackground(
-                    Color.pink,
-                    for: .navigationBar)
-                .toolbarBackground(.visible, for: .navigationBar)
+    var body: some View {
+        NavigationStack {
+            VStack {
+                Picker("",selection: $segmentedChoice){
+                    Text ("All").tag(0)
+                    Text ("Expences").tag(1)
+                    Text ("Incomes").tag(2)
+                }.padding() .pickerStyle(SegmentedPickerStyle())
+                
+                EnterAmountView(shouldShowTitle: false, title: "", amount: "200.0")
+                    .padding([.top], 10)
+                
+                CategoryListView()
+                Spacer()
             }
+            .background(Color.white)
+            .navigationTitle("Expense")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button("Cancel") {
+                        print("Pressed")
+                    }
+                    .foregroundColor(Color.red)
+                }
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Save") {
+                        print("Pressed")
+                    }
+                    .foregroundColor(Color.blue)
+                }
+            }
+            .toolbarColorScheme(.dark, for: .navigationBar)
+            .toolbarBackground(
+                Color.gray,
+                for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
         }
+    }
 }
 
 struct TransactionMainView_Previews: PreviewProvider {
