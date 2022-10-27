@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct EnterAmountView: View {
     var body: some View {
         VStack {
