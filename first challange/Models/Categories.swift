@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Categories {
+class Categories {
     var categories: [CategoryImageModel] = [
         CategoryImageModel(image: .education, color: .main_purple),
         CategoryImageModel(image: .clothes, color: .main_red_color),
@@ -19,5 +19,10 @@ struct Categories {
         CategoryImageModel(image: "bell", color: .main_green_color)
 
     ]
-    
+ 
+    func makeDisableAll() {
+        categories.enumerated().forEach {
+            categories[$0.offset].isSelected = false
+        }
+    }
 }

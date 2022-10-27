@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TransactionMainView: View {
+    @Environment(\.presentationMode) var presentationMode
     @State var segmentedChoice = 0
 
     var body: some View {
@@ -37,7 +38,7 @@ struct TransactionMainView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button("Cancel") {
-                        print("Pressed")
+                        presentationMode.wrappedValue.dismiss()
                     }
                     .foregroundColor(Color.red)
                 }
@@ -45,7 +46,7 @@ struct TransactionMainView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Save") {
-                        print("Pressed")
+                        presentationMode.wrappedValue.dismiss()
                     }
                     .foregroundColor(Color.blue)
                 }

@@ -9,7 +9,8 @@ import SwiftUI
 
 struct CategoryListView: View {
     let itemSize = ((screenWidth - 40) / 4) - 20
-    let categories: [CategoryImageModel] = Categories().categories
+    @State var categories: Categories = Categories()
+//    var currentId =
     
     var body: some View {
         NavigationView{
@@ -18,8 +19,14 @@ struct CategoryListView: View {
                     HStack(alignment: .center, spacing: cell.spacing){
                         ForEach(0 ..< 4){ j in
                             let id = i * 4 + j
-                                CollectionViewCell(category: categories[id])
+                            Button {
+                                categories.makeDisableAll()
+                                categories.categories[id].isSelected = true
+                            } label: {
+                                CollectionViewCell(category: $categories.categories[id])
                                     .frame(width: itemSize, height: itemSize)
+                            }
+
                         }
                     }
                     .padding(.bottom, 10)

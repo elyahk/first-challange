@@ -10,4 +10,5 @@ import Foundation
 struct CategoryImageModel {
     let image: String
     let color: String
+    var isSelected: Bool = false
 }

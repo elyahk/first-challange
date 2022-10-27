@@ -9,24 +9,21 @@
 import SwiftUI
 
 struct CollectionViewCell: View {
-    var category: CategoryImageModel
+    @Binding var category: CategoryImageModel
     
-    init(category: CategoryImageModel) {
-        self.category = category
-    }
     var body: some View {
-        
-        ZStack {
+        VStack {
             CategoryImageView(model: category)
-        } .onTapGesture {
         }
+        .border(Color.black, width: category.isSelected ? 4 : 0)
         
     }
 }
 
 struct CollectionViewCell_Previews: PreviewProvider {
     static var previews: some View {
-        CollectionViewCell(category: CategoryImageModel(image: "bell", color: .main_purple))
+        CollectionViewCell(category: Binding(CategoryImageModel(image: "bell", color: .main_purple)))
+//        CollectionViewCell(category: $CategoryImageModel(image: "bell", color: .main_purple))
     }
 }
 

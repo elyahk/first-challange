@@ -37,7 +37,8 @@ extension Color {
 struct DashboardCircleButton: View {
     @State var circleTapped = true
     @State var circlePressed = false
-    
+    @State private var showingSheet = false
+
     var body: some View {
         VStack {
             Image(systemName: "plus")
@@ -60,9 +61,13 @@ struct DashboardCircleButton: View {
         .scaleEffect(circleTapped ? 1.2 : 1)
         .onTapGesture(count: 1) {
             self.circleTapped.toggle()
+            self.showingSheet.toggle()
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 self.circleTapped = false
             }
+        }
+        .fullScreenCover(isPresented: $showingSheet) {
+            TransactionMainView()
         }
     }
 }
