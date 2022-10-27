@@ -20,8 +20,8 @@ struct CategoryListView: View {
                 .padding(.bottom, 10)
             }
         }
-        .navigationBarTitle("Category")
-        .navigationBarTitleDisplayMode(.large)
+      //  .navigationBarTitle("Category")
+     //   .navigationBarTitleDisplayMode(.large)
         .scrollDisabled(true)
         }
     }

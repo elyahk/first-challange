@@ -12,7 +12,7 @@ struct TransactionMainView: View {
 
     var body: some View {
         NavigationStack {
-            VStack {
+            VStack(alignment: .leading) {
                 Picker("",selection: $segmentedChoice){
                     Text ("All").tag(0)
                     Text ("Expences").tag(1)
@@ -21,6 +21,12 @@ struct TransactionMainView: View {
                 
                 EnterAmountView(shouldShowTitle: false, title: "", amount: "200.0")
                     .padding([.top], 10)
+                
+                Text("Category")
+                    .font(.system(size: 22))
+                    .fontWeight(.bold)
+                    .padding([.leading])
+                    
                 
                 CategoryListView()
                 Spacer()
