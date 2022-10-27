@@ -107,6 +107,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E2F9532290AAD300084F458 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6DF7C6DA2906CCF400FF95FF /* DashboardListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		6E9522532906C4750059634A = {
 			isa = PBXGroup;
 			children = (
@@ -130,12 +138,12 @@
 		6E95225E2906C4750059634A /* first challange */ = {
 			isa = PBXGroup;
 			children = (
+				6E2F9532290AAD300084F458 /* Views */,
 				085C184629095ED30048C55B /* CollectionViewCell.swift */,
 				085C184729095ED30048C55B /* Constants.swift */,
 				780CB7F62908081E001E0DBA /* DashboardTopView.swift */,
 				6E95225F2906C4750059634A /* first_challangeApp.swift */,
 				6E9522612906C4750059634A /* ContentView.swift */,
-				6DF7C6DA2906CCF400FF95FF /* DashboardListView.swift */,
 				6D26960B29095E9900EF974C /* EnterAmountView.swift */,
 				7882F15429095CA5005A3AD6 /* Adding.swift */,
 				7882F15629097A77005A3AD6 /* HistoryView.swift */,
