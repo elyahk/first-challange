@@ -15,14 +15,15 @@ struct CollectionViewCell: View {
          }
       var body: some View {
          
-          ZStack{
+          ZStack {
               
-              RoundedRectangle(cornerRadius: 10)
-                  .fill(color.lightGreen)
-                  .frame(width: cell.width, height: cell.width)
-              Image(systemName: "house")
-                  .foregroundColor(.white)
-                  .font(.largeTitle)
+              CategoryImageView(model: .init(image: "bell", color: .main_purple))
+//              RoundedRectangle(cornerRadius: 10)
+//                  .fill(color.lightGreen)
+//                  .frame(width: cell.width, height: cell.width)
+//              Image(systemName: "house")
+//                  .foregroundColor(.white)
+//                  .font(.largeTitle)
               
               
           } .onTapGesture {

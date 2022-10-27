@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct CategoryListView: View {
+    let itemSize = ((screenWidth - 40) / 4) - 20
+    
     var body: some View {
         NavigationView{
         ScrollView(.vertical, showsIndicators: false) {
@@ -15,6 +17,7 @@ struct CategoryListView: View {
                 HStack(alignment: .center, spacing: cell.spacing){
                     ForEach(0 ..< cell.column){ j in
                         CollectionViewCell(row: i, column: j)
+                            .frame(width: itemSize, height: itemSize)
                     }
                 }
                 .padding(.bottom, 10)
