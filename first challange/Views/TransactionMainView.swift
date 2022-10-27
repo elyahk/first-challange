@@ -27,8 +27,8 @@ struct TransactionMainView: View {
                     .fontWeight(.bold)
                     .padding([.leading])
                     
-                
                 CategoryListView()
+                    
                 Spacer()
             }
             .background(Color(hex: .gray_light))
