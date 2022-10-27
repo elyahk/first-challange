@@ -31,11 +31,12 @@ struct TabbarView: View {
 
 struct TabbarView_Previews: PreviewProvider {
     static var previews: some View {
-       Group {
-            TabbarView()
-            TabbarView()
-            TabbarView()
-       }
-       .previewDevice("iPhone SE (3rd generation)")
+        
+        TabbarView()
+            .previewDevice("iPhone SE (3rd generation)")
+        TabbarView()
+            .previewDevice("iPhone 13")
+        TabbarView()
+            .previewDevice("iPhone 14 Pro Max")
     }
 }
