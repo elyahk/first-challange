@@ -7,7 +7,6 @@
 
 import Foundation
 extension String {
-    
     static let education = "custom.graduationcap.fill"
     static let mainpageicon = "wallet.pass.fill"
     static let entertainment = "custom.gamecontroller.fill"
