@@ -21,6 +21,7 @@ struct CategoryListView: View {
             }
         }
         .navigationBarTitle("Category")
+        .navigationBarTitleDisplayMode(.large)
         .scrollDisabled(true)
         }
     }

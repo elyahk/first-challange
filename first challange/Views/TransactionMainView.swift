@@ -17,7 +17,7 @@ struct TransactionMainView: View {
                     Text ("All").tag(0)
                     Text ("Expences").tag(1)
                     Text ("Incomes").tag(2)
-                }.padding() .pickerStyle(SegmentedPickerStyle())
+                }.padding([.top, .leading, .trailing]) .pickerStyle(SegmentedPickerStyle())
                 
                 EnterAmountView(shouldShowTitle: false, title: "", amount: "200.0")
                     .padding([.top], 10)
@@ -25,7 +25,7 @@ struct TransactionMainView: View {
                 CategoryListView()
                 Spacer()
             }
-            .background(Color.white)
+            .background(Color(hex: .gray_light))
             .navigationTitle("Expense")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -44,10 +44,6 @@ struct TransactionMainView: View {
                     .foregroundColor(Color.blue)
                 }
             }
-            .toolbarColorScheme(.dark, for: .navigationBar)
-            .toolbarBackground(
-                Color.gray,
-                for: .navigationBar)
             .toolbarBackground(.visible, for: .navigationBar)
         }
     }

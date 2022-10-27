@@ -11,6 +11,7 @@ struct EnterAmountView: View {
     @State var shouldShowTitle: Bool
     @State var title: String
     @State var amount: String
+    @FocusState private var keyboardFocused: Bool
     
     init(shouldShowTitle: Bool, title: String, amount: String) {
         self.shouldShowTitle = shouldShowTitle
@@ -40,6 +41,14 @@ struct EnterAmountView: View {
                     .multilineTextAlignment(.trailing)
                     .font(.system(size: 38.0, weight: .bold))
                     .padding([.trailing], 20)
+                    .keyboardType(.decimalPad)
+                    .focused($keyboardFocused)
+                        .onAppear {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                keyboardFocused = true
+                            }
+                        }
+                    
             }
             .background(Color.white)
         }
