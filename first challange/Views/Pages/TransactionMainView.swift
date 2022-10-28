@@ -15,9 +15,8 @@ struct TransactionMainView: View {
         NavigationStack {
             VStack(alignment: .leading) {
                 Picker("",selection: $segmentedChoice){
-                    Text ("All").tag(0)
-                    Text ("Expences").tag(1)
-                    Text ("Incomes").tag(2)
+                    Text ("Expences").tag(0)
+                    Text ("Incomes").tag(1)
                 }.padding([.top, .leading, .trailing]) .pickerStyle(SegmentedPickerStyle())
                 
                 EnterAmountView(shouldShowTitle: false, title: "", amount: "")

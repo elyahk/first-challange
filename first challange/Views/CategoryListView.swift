@@ -18,12 +18,11 @@ struct CategoryListView: View {
                         ForEach(0 ..< 4){ j in
                             let id = i * 4 + j
                             Button {
-                                categories.makeDisableAll()
-                                categories.categories[id].isSelected = true
+//                                categories.makeDisableAll()
+//                                categories.categories[id].isSelected = true
                             } label: {
                                 CategoryViewCell(category: categories.categories[id])
                             }
-
                         }
                     }
                     .padding(.bottom, 10)
