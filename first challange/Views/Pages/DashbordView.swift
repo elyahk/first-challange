@@ -10,7 +10,7 @@ import SwiftUI
 struct DashbordView: View {
     var body: some View {
         VStack {
-            DashboardTopView2()
+            DashboardTopView()
             
             TransactionListView(transactions: [TransactionItem.example])
                 .frame(minHeight: universalHeight(height: 250.0))

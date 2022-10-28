@@ -18,7 +18,7 @@ func universalWidth(width: CGFloat) -> CGFloat {
     screenWidth / 390.0 * width
 }
 
-struct DashboardTopView2: View {
+struct DashboardTopView: View {
     var body: some View {
         VStack {
             VStack {
@@ -58,7 +58,7 @@ struct DashboardTopView2: View {
 struct DashboardTopView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            DashboardTopView2()
+            DashboardTopView()
                 .previewDevice("iPhone 14 Plus")
         }
     }
