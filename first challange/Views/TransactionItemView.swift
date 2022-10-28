@@ -39,6 +39,6 @@ struct TransactionItemView: View {
 
 struct TransactionItemView_Previews: PreviewProvider {
     static var previews: some View {
-        TransactionItemView(transaction: .init(name: "Hello baby", money: 100.0, category: CategoryImageModel(image: "bell", color: .main_red_color)))
+        TransactionItemView(transaction: .init(name: "Hello baby", money: 100.0, category: CategoryImageModel(image: "bell", color: .main_red_color, name: "Shopping")))
     }
 }

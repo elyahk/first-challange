@@ -22,7 +22,7 @@ struct CategoryViewCell: View {
 struct CollectionViewCell_Previews: PreviewProvider {
     static var previews: some View {
         CategoryViewCell(
-            category: CategoryImageModel(image: "bell", color: .main_purple)
+            category: CategoryImageModel(image: "bell", color: .main_purple, name: "Shopping")
         )
     }
 }

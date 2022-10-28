@@ -35,7 +35,7 @@ extension Color {
 }
 
 struct DashboardCircleButton: View {
-    @State var circleTapped = true
+    @State var circleTapped = false
     @State var circlePressed = false
     @State private var showingSheet = false
 
@@ -66,6 +66,7 @@ struct DashboardCircleButton: View {
                 self.circleTapped = false
             }
         }
+        
         .fullScreenCover(isPresented: $showingSheet) {
             TransactionMainView()
         }

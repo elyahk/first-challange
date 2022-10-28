@@ -9,18 +9,16 @@ import SwiftUI
 
 struct HistoryView: View {
     @State var segmentedChoice = 0
+    
     var body: some View {
         VStack{
-            Picker("",selection: $segmentedChoice){
+            Picker("", selection: $segmentedChoice){
                 Text ("All").tag(0)
                 Text ("Expences").tag(1)
                 Text ("Incomes").tag(2)
             }.padding() .pickerStyle(SegmentedPickerStyle())
-            
-            Text("Date")
-                .padding(.leading, -170.0)
-            
-            TransactionListView(transactions: [TransactionItem.example])
+                        
+            TransactionListView(title: "History", transactions: [TransactionItem.example])
         }
     }
 }

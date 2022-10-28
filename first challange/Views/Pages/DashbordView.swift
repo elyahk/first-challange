@@ -12,11 +12,12 @@ struct DashbordView: View {
         VStack {
             DashboardTopView()
             
-            TransactionListView(transactions: [TransactionItem.example])
-                .frame(minHeight: universalHeight(height: 250.0))
+            TransactionListView(title: "Latest Actions", transactions: [TransactionItem.example])
+//                .frame(minHeight: universalHeight(height: 250.0))
             Spacer()
             DashboardCircleButton()
-            Spacer()
+                .padding([.bottom], 40)
+                .ignoresSafeArea()
         }
     }
 }

@@ -14,17 +14,18 @@ struct TransactionItem: Identifiable {
     let category: CategoryImageModel
     
     static var example: TransactionItem {
-        TransactionItem(name: "Food", money: 12, category: CategoryImageModel(image: "bell", color: .main_red_color))
+        TransactionItem(name: "Food", money: 12, category: CategoryImageModel(image: "bell", color: .main_red_color, name: "Shopping"))
     }
 }
 
 struct TransactionListView: View {
+    @State var title: String
     var transactions: [TransactionItem]
     
     var body: some View {
         VStack {
             List {
-                Section("Latest Action") {
+                Section(title) {
                     ForEach(transactions) { action in
                         TransactionItemView(transaction: action)
                     }
@@ -45,6 +46,6 @@ struct TransactionListView: View {
 
 struct DashboardListView_Previews: PreviewProvider {
     static var previews: some View {
-        TransactionListView(transactions: [TransactionItem.example])
+        TransactionListView(title: "Preview", transactions: [TransactionItem.example])
     }
 }
