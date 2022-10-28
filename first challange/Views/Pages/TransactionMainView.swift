@@ -17,7 +17,13 @@ struct TransactionMainView: View {
                 Picker("",selection: $segmentedChoice){
                     Text ("Expences").tag(0)
                     Text ("Incomes").tag(1)
-                }.padding([.top, .leading, .trailing]) .pickerStyle(SegmentedPickerStyle())
+                }
+                .onChange(of: segmentedChoice) { _ in
+                    
+                }
+                .padding([.top, .leading, .trailing])
+                .pickerStyle(SegmentedPickerStyle())
+                
                 
                 EnterAmountView(shouldShowTitle: false, title: "", amount: "")
                     .padding([.top], 10)
@@ -27,7 +33,7 @@ struct TransactionMainView: View {
                     .fontWeight(.bold)
                     .padding([.leading])
                     
-//                CategoryListView(columnCount: 1, categories: [Categories().categories[0]])
+                CategoryListView(isExpense: $segmentedChoice)
                     
                 Spacer()
             }
