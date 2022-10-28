@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct CollectionViewCell: View {
+struct CategoryViewCell: View {
     var category: CategoryImageModel
     
     var body: some View {
@@ -21,7 +21,7 @@ struct CollectionViewCell: View {
 
 struct CollectionViewCell_Previews: PreviewProvider {
     static var previews: some View {
-        CollectionViewCell(
+        CategoryViewCell(
             category: CategoryImageModel(image: "bell", color: .main_purple)
         )
     }

@@ -22,7 +22,7 @@ struct CategoryListView: View {
                                 categories.makeDisableAll()
                                 categories.categories[id].isSelected = true
                             } label: {
-                                CollectionViewCell(category: categories.categories[id])
+                                CategoryViewCell(category: categories.categories[id])
                                     .frame(width: itemSize, height: itemSize)
                             }
 

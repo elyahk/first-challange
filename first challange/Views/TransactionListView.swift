@@ -18,7 +18,7 @@ struct TransactionItem: Identifiable {
     }
 }
 
-struct DashboardListView: View {
+struct TransactionListView: View {
     var transactions: [TransactionItem]
     
     var body: some View {
@@ -45,6 +45,6 @@ struct DashboardListView: View {
 
 struct DashboardListView_Previews: PreviewProvider {
     static var previews: some View {
-        DashboardListView(transactions: [TransactionItem.example])
+        TransactionListView(transactions: [TransactionItem.example])
     }
 }
