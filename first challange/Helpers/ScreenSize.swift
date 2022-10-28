@@ -5,7 +5,7 @@
 //  Created by Eldorbek Nusratov on 28/10/22.
 //
 
-import Foundation
+import SwiftUI
 
 let screenWidth = UIScreen.main.bounds.width
 let scrennHeight = UIScreen.main.bounds.height
