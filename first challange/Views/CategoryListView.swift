@@ -10,7 +10,6 @@ import SwiftUI
 struct CategoryListView: View {
     let itemSize = ((screenWidth - 40) / 4) - 20
     @State var categories: Categories = Categories()
-//    var currentId =
     
     var body: some View {
         NavigationView{
