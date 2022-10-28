@@ -114,6 +114,7 @@
 		6E2F9532290AAD300084F458 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6ED908D4290C0E8E00BB5872 /* Controller */,
 				6ED908D0290C045700BB5872 /* Temps */,
 				6ED908CF290C041800BB5872 /* Pages */,
 				6ED34EF129095C0D004A6ED0 /* DashboardTopSummaryView.swift */,
@@ -225,6 +226,13 @@
 				6ED908D2290C058000BB5872 /* ScreenSize.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		6ED908D4290C0E8E00BB5872 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

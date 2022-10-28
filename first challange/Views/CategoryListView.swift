@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CategoryListView: View {
     let itemSize = ((screenWidth - 40) / 4) - 20
-    @State var categories: Categories = Categories()
+    @State var categories: [CategoryImageModel] = Categories().categories
     
     var body: some View {
         NavigationView{
@@ -19,13 +19,12 @@ struct CategoryListView: View {
                         ForEach(0 ..< 4){ j in
                             let id = i * 4 + j
                             Button {
-                                categories.makeDisableAll()
-                                categories.categories[id].isSelected = true
+//                                categories.makeDisableAll()
+//                                categories.categories[id].isSelected = true
                             } label: {
-                                CategoryViewCell(category: categories.categories[id])
+                                CategoryViewCell(category: categories[id])
                                     .frame(width: itemSize, height: itemSize)
                             }
-
                         }
                     }
                     .padding(.bottom, 10)
