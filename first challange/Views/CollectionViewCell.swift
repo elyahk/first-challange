@@ -9,21 +9,21 @@
 import SwiftUI
 
 struct CollectionViewCell: View {
-    @Binding var category: CategoryImageModel
+    var category: CategoryImageModel
     
     var body: some View {
         VStack {
             CategoryImageView(model: category)
         }
         .border(Color.black, width: category.isSelected ? 4 : 0)
-        
     }
 }
 
 struct CollectionViewCell_Previews: PreviewProvider {
     static var previews: some View {
-        CollectionViewCell(category: Binding(CategoryImageModel(image: "bell", color: .main_purple)))
-//        CollectionViewCell(category: $CategoryImageModel(image: "bell", color: .main_purple))
+        CollectionViewCell(
+            category: CategoryImageModel(image: "bell", color: .main_purple)
+        )
     }
 }
 
