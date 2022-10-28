@@ -27,7 +27,7 @@ struct TransactionMainView: View {
                     .fontWeight(.bold)
                     .padding([.leading])
                     
-                CategoryListView()
+//                CategoryListView(columnCount: 1, categories: [Categories().categories[0]])
                     
                 Spacer()
             }

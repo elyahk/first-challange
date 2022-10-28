@@ -21,7 +21,7 @@ class Categories {
    
     var incomes = [
         CategoryImageModel(image: "dollarsign.square.fill", color: "448AFF", name: "Salary"),
-        CategoryImageModel(image: "custom.person.3.sequence.fill", color: "FF9800", name: "Parents"),
+        CategoryImageModel(image: "person.3.sequence.fill", color: "FF9800", name: "Parents"),
         CategoryImageModel(image: "gift.fill", color: "009688", name: "Bonus" ),
         CategoryImageModel(image: "line.3.horizontal.circle.fill", color: "FFC107", name: "Other")
     ]
