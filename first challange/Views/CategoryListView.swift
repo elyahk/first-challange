@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct CategoryListView: View {
-    let itemSize = ((screenWidth - 40) / 4) - 20
     @State var categories: Categories = Categories()
     
     var body: some View {
@@ -23,7 +22,6 @@ struct CategoryListView: View {
                                 categories.categories[id].isSelected = true
                             } label: {
                                 CategoryViewCell(category: categories.categories[id])
-                                    .frame(width: itemSize, height: itemSize)
                             }
 
                         }
