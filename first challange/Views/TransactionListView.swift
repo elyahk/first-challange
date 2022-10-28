@@ -7,17 +7,6 @@
 
 import SwiftUI
 
-struct TransactionItem: Identifiable {
-    let name: String
-    let id = UUID()
-    var money : Double
-    let category: CategoryImageModel
-    
-    static var example: TransactionItem {
-        TransactionItem(name: "Food", money: 12, category: CategoryImageModel(image: "bell", color: .main_red_color, name: "Shopping"))
-    }
-}
-
 struct TransactionListView: View {
     @State var title: String
     var transactions: [TransactionItem]
@@ -26,8 +15,8 @@ struct TransactionListView: View {
         VStack {
             List {
                 Section(title) {
-                    ForEach(transactions) { action in
-                        TransactionItemView(transaction: action)
+                    ForEach(transactions) { transaction in
+                        TransactionItemView(transaction: transaction)
                     }
                 }
                 .foregroundColor(Color.black)

@@ -31,7 +31,7 @@ struct TransactionItemView: View {
             Spacer()
             Text(String(transaction.money))
                 .font(.system(size: 17.0, weight: .regular))
-                .foregroundColor(Color(hex: .main_red_color))
+                .foregroundColor(Color(hex: transaction.moneyHexColor()))
         }
     }
 }

@@ -17,7 +17,7 @@ struct TransactionMainView: View {
     func getCategoryList() -> CategoryListView {
         var categoryList = CategoryListView(isExpense: $segmentedChoice)
         categoryList.selected = { category in
-            let transaction = TransactionItem(name: category.name, money: Double(money)!, category: category)
+            let transaction = TransactionItem(name: category.name, money: Double(money)!, category: category, isExpense: segmentedChoice == 0)
             save?(transaction)
             dismissView()
         }
