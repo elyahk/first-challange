@@ -112,21 +112,17 @@
 		6E2F9532290AAD300084F458 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7882F15429095CA5005A3AD6 /* Adding.swift */,
-				7882F15629097A77005A3AD6 /* HistoryView.swift */,
+				6ED908D0290C045700BB5872 /* Temps */,
+				6ED908CF290C041800BB5872 /* Pages */,
 				6ED34EF129095C0D004A6ED0 /* DashboardTopSummaryView.swift */,
 				6D26960B29095E9900EF974C /* EnterAmountView.swift */,
 				084F7C9D2908227A00D85382 /* CategoryImageView.swift */,
 				6E95228F29081E110059634A /* TransactionItemView.swift */,
-				6E9522612906C4750059634A /* ContentView.swift */,
 				6ED34EF329095C72004A6ED0 /* DashboardTopView.swift */,
 				085C184629095ED30048C55B /* CollectionViewCell.swift */,
 				085C184E29095F160048C55B /* CategoryListView.swift */,
-				6EE5F34B290981BB0070C6DC /* DashbordView.swift */,
 				6E95228B2906CF610059634A /* DashboardCircleButton.swift */,
-				6EE5F34D29098A850070C6DC /* TabbarView.swift */,
 				6DF7C6DA2906CCF400FF95FF /* DashboardListView.swift */,
-				6E3A4018290AB47F00D4A74C /* TransactionMainView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -198,6 +194,26 @@
 				6E95227C2906C4760059634A /* first_challangeUITestsLaunchTests.swift */,
 			);
 			path = "first challangeUITests";
+			sourceTree = "<group>";
+		};
+		6ED908CF290C041800BB5872 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				6EE5F34B290981BB0070C6DC /* DashbordView.swift */,
+				7882F15629097A77005A3AD6 /* HistoryView.swift */,
+				6EE5F34D29098A850070C6DC /* TabbarView.swift */,
+				6E3A4018290AB47F00D4A74C /* TransactionMainView.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		6ED908D0290C045700BB5872 /* Temps */ = {
+			isa = PBXGroup;
+			children = (
+				6E9522612906C4750059634A /* ContentView.swift */,
+				7882F15429095CA5005A3AD6 /* Adding.swift */,
+			);
+			path = Temps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
