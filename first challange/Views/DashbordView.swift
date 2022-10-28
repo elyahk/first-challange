@@ -12,7 +12,7 @@ struct DashbordView: View {
         VStack {
             DashboardTopView2()
             
-            DashboardListView(actions: [TransactionItem.example])
+            DashboardListView(transactions: [TransactionItem.example])
                 .frame(minHeight: universalHeight(height: 250.0))
             Spacer()
             DashboardCircleButton()

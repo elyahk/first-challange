@@ -19,13 +19,13 @@ struct TransactionItem: Identifiable {
 }
 
 struct DashboardListView: View {
-    var actions: [TransactionItem]
+    var transactions: [TransactionItem]
     
     var body: some View {
         VStack {
             List {
                 Section("Latest Action") {
-                    ForEach(actions) { action in
+                    ForEach(transactions) { action in
                         TransactionItemView(transaction: action)
                     }
                 }
@@ -45,6 +45,6 @@ struct DashboardListView: View {
 
 struct DashboardListView_Previews: PreviewProvider {
     static var previews: some View {
-        DashboardListView(actions: [TransactionItem.example])
+        DashboardListView(transactions: [TransactionItem.example])
     }
 }

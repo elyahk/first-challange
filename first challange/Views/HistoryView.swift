@@ -20,7 +20,7 @@ struct HistoryView: View {
             Text("Date")
                 .padding(.leading, -170.0)
             
-            DashboardListView(actions: [TransactionItem.example])
+            DashboardListView(transactions: [TransactionItem.example])
         }
     }
 }
