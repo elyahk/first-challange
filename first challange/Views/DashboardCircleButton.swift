@@ -39,14 +39,13 @@ struct DashboardCircleButton: View {
     @State var circlePressed = false
     @State private var showingSheet = false
 
+    var save: ((TransactionItem) -> Void)? = nil
+    
     var body: some View {
         VStack {
             Image(systemName: "plus")
                 .foregroundColor(Color(hex: .white_color))
                 .font(.system(size: 40, weight: .light))
-//                .offset(x: circlePressed ? -90 : 0, y: circlePressed ? -90 : 0)
-//                .rotation3DEffect(Angle(degrees: circlePressed ? 20 : 0),
-//                                        axis: (x: 10, y: -10, z: 0))
         }
         .frame(width: 60, height: 60)
         .background(
@@ -68,8 +67,15 @@ struct DashboardCircleButton: View {
         }
         
         .fullScreenCover(isPresented: $showingSheet) {
-            TransactionMainView()
+           makeTransactionMainView()
         }
+    }
+    
+    func makeTransactionMainView() -> TransactionMainView {
+        var view = TransactionMainView()
+        view.save = save
+        
+        return view
     }
 }
 

@@ -10,14 +10,14 @@ import SwiftUI
 struct EnterAmountView: View {
     @State var shouldShowTitle: Bool
     @State var title: String
-    @State var amount: String
+    @Binding var amount: String
     @FocusState private var keyboardFocused: Bool
     
-    init(shouldShowTitle: Bool, title: String, amount: String) {
-        self.shouldShowTitle = shouldShowTitle
-        self.title = title
-        self.amount = amount
-    }
+//    init(shouldShowTitle: Bool, title: String, amount: String) {
+//        self.shouldShowTitle = shouldShowTitle
+//        self.title = title
+//        self.amount = amount
+//    }
     
     var body: some View {
         VStack {
@@ -56,8 +56,8 @@ struct EnterAmountView: View {
     }
 }
 
-struct EnterAmountView_Previews: PreviewProvider {
-    static var previews: some View {
-        EnterAmountView(shouldShowTitle: true, title: "Title", amount: "100.0")
-    }
-}
+//struct EnterAmountView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        EnterAmountView(shouldShowTitle: true, title: "Title", amount: "100.0")
+//    }
+//}

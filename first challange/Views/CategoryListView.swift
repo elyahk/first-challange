@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CategoryListView: View {
     @Binding var isExpense: Int
+    var selected: ((CategoryImageModel) -> Void)? = nil
         
     var categories: [CategoryImageModel] {
         isExpense == 0 ? Categories().categories : Categories().incomes
@@ -24,7 +25,7 @@ struct CategoryListView: View {
                             ForEach(0 ..< 4){ j in
                                 var id = i * 4 + j
                                 Button {
-
+                                    selected?(categories[id])
                                 } label: {
                                     CategoryViewCell(category: categories[id])
                                 }
@@ -38,7 +39,7 @@ struct CategoryListView: View {
                             ForEach(0 ..< 4){ j in
                                 var id = i * 4 + j
                                 Button {
-
+                                    selected?(categories[id])
                                 } label: {
                                     CategoryViewCell(category: categories[id])
                                 }

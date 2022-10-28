@@ -18,8 +18,8 @@ struct TargetView: View {
 //        transaction main view
         NavigationStack {
             VStack(alignment: .leading) {
-                EnterAmountView(shouldShowTitle: false, title: "", amount: "")
-                    .padding([.top], 10)
+//                EnterAmountView(shouldShowTitle: false, title: "", amount: "")
+//                    .padding([.top], 10)
                     
                 Spacer()
             }

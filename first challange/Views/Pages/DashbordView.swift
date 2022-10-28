@@ -8,17 +8,29 @@
 import SwiftUI
 
 struct DashbordView: View {
+    @State var transactions: [TransactionItem] = []
+    
     var body: some View {
         VStack {
             DashboardTopView()
             
-            TransactionListView(title: "Latest Actions", transactions: [TransactionItem.example])
+            TransactionListView(title: "Latest Actions", transactions: transactions)
 //                .frame(minHeight: universalHeight(height: 250.0))
             Spacer()
-            DashboardCircleButton()
+            makeCircleButton()
                 .padding([.bottom], 40)
                 .ignoresSafeArea()
+            
         }
+    }
+    
+    func makeCircleButton() -> DashboardCircleButton {
+        var view = DashboardCircleButton()
+        view.save = { item in
+            transactions.append(item)
+        }
+        
+        return view
     }
 }
 
