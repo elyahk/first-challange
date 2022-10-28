@@ -36,7 +36,7 @@ struct EnterAmountView: View {
                     .frame(width: 51, height: 78)
                 Spacer()
                 
-                TextField("Enter something", text: $amount)
+                TextField("0", text: $amount)
                     .background(Color.clear)
                     .multilineTextAlignment(.trailing)
                     .font(.system(size: 38.0, weight: .bold))

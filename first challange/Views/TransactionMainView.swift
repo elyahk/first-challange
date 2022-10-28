@@ -20,7 +20,7 @@ struct TransactionMainView: View {
                     Text ("Incomes").tag(2)
                 }.padding([.top, .leading, .trailing]) .pickerStyle(SegmentedPickerStyle())
                 
-                EnterAmountView(shouldShowTitle: false, title: "", amount: "200.0")
+                EnterAmountView(shouldShowTitle: false, title: "", amount: "")
                     .padding([.top], 10)
                 
                 Text("Category")
