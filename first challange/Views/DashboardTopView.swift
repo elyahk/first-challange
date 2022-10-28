@@ -7,17 +7,6 @@
 
 import SwiftUI
 
-let screenWidth = UIScreen.main.bounds.width
-let scrennHeight = UIScreen.main.bounds.height
-
-func universalHeight(height: CGFloat) -> CGFloat {
-    scrennHeight / 844.0 * height
-}
-
-func universalWidth(width: CGFloat) -> CGFloat {
-    screenWidth / 390.0 * width
-}
-
 struct DashboardTopView: View {
     var body: some View {
         VStack {
@@ -36,13 +25,12 @@ struct DashboardTopView: View {
                             .fill(Color(hex: "FCFCFE"))
                             .frame(width: 150, height: 45)
                     }
-                DashboardTopSummaryView()
                 
+                DashboardTopSummaryView()
                     .padding([.leading, .trailing])
                     .padding([.leading, .trailing], 20)
                 
                 DashboardTopSummaryView()
-                
                     .padding([.leading, .trailing, .bottom])
                     .padding([.leading, .trailing], 20)
             }
