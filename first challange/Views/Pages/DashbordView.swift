@@ -11,16 +11,18 @@ struct DashbordView: View {
     @State var transactions: [TransactionItem] = []
     
     var body: some View {
-        VStack {
-            DashboardTopView()
-            
-            TransactionListView(title: "Latest Actions", transactions: transactions)
-//                .frame(minHeight: universalHeight(height: 250.0))
-            Spacer()
-            makeCircleButton()
-                .padding([.bottom], 40)
-                .ignoresSafeArea()
-            
+        NavigationView {
+            VStack {
+                DashboardTopView()
+                
+                TransactionListView(title: "Latest Actions", transactions: transactions)
+                //                .frame(minHeight: universalHeight(height: 250.0))
+                Spacer()
+                makeCircleButton()
+                    .padding([.bottom], 40)
+                    .ignoresSafeArea()
+                
+            }
         }
     }
     

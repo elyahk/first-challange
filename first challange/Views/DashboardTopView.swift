@@ -15,16 +15,19 @@ struct DashboardTopView: View {
                     .font(.system(size: 24))
                     .fontWeight(.light)
                     .padding([.top], universalHeight(height: 20))
-                Text("500 $")
-                    .padding([.leading, .trailing], universalHeight(height: 20))
-                    .padding([.top, .bottom], universalHeight(height: 10))
-                    .font(.system(size: 24))
-                    .fontWeight(.black)
-                    .background {
-                        RoundedRectangle(cornerRadius: 15, style: .continuous)
-                            .fill(Color(hex: "FCFCFE"))
-                            .frame(width: 150, height: 45)
-                    }
+                NavigationLink(destination: TargetView()) {
+                    Text("500 $")
+                        .foregroundColor(Color.black)
+                        .padding([.leading, .trailing], universalHeight(height: 20))
+                        .padding([.top, .bottom], universalHeight(height: 10))
+                        .font(.system(size: 24))
+                        .fontWeight(.black)
+                        .background {
+                            RoundedRectangle(cornerRadius: 15, style: .continuous)
+                                .fill(Color(hex: "FCFCFE"))
+                                .frame(width: 150, height: 45)
+                        }
+                }
                 
                 DashboardTopSummaryView()
                     .padding([.leading, .trailing])
