@@ -13,8 +13,10 @@ struct DashbordView: View {
     var body: some View {
         NavigationView {
             VStack {
-                DashboardTopView()
                 
+                DashboardTopView()
+                   
+                    
                 TransactionListView(title: "Latest Actions", transactions: manager.transactions)
                 //                .frame(minHeight: universalHeight(height: 250.0))
                 Spacer()
@@ -24,6 +26,7 @@ struct DashbordView: View {
                     .ignoresSafeArea()
                 
             }
+            
         }
     }
     
