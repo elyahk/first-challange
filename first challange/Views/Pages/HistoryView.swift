@@ -17,9 +17,17 @@ struct HistoryView: View {
                 Text ("All").tag(0)
                 Text ("Expences").tag(1)
                 Text ("Incomes").tag(2)
-            }.padding() .pickerStyle(SegmentedPickerStyle())
+            }
+            .padding()
+            .pickerStyle(.segmented)
                         
-            TransactionListView(title: "History", transactions: manager.transactions)
+            if segmentedChoice == 0 {
+                TransactionListView(title: "History", transactions: manager.transactions)
+            } else if segmentedChoice == 1 {
+                TransactionListView(title: "Expenses", transactions: manager.expenses())
+            } else {
+                TransactionListView(title: "Incomes", transactions: manager.incomes())
+            }
         }
     }
 }

@@ -9,4 +9,12 @@ import Foundation
 
 class TransactionManager: ObservableObject {
     @Published var transactions: [TransactionItem] = []
+    
+    func expenses() -> [TransactionItem] {
+        transactions.filter { $0.isExpense }
+    }
+    
+    func incomes() -> [TransactionItem] {
+        transactions.filter { !$0.isExpense }
+    }
 }
