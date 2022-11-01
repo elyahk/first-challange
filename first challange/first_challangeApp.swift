@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct first_challangeApp: App {
+    @StateObject var manager = TransactionManager()
+
     var body: some Scene {
         WindowGroup {
             TabbarView()
+                .environmentObject(manager)
         }
     }
 }

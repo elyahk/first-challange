@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct DashbordView: View {
-    @State var transactions: [TransactionItem] = []
+    @EnvironmentObject var manager: TransactionManager
     
     var body: some View {
         NavigationView {
             VStack {
                 DashboardTopView()
                 
-                TransactionListView(title: "Latest Actions", transactions: transactions)
+                TransactionListView(title: "Latest Actions", transactions: manager.transactions)
                 //                .frame(minHeight: universalHeight(height: 250.0))
                 Spacer()
                 makeCircleButton()
@@ -29,7 +29,7 @@ struct DashbordView: View {
     func makeCircleButton() -> DashboardCircleButton {
         var view = DashboardCircleButton()
         view.save = { item in
-            transactions.append(item)
+            manager.transactions.append(item)
         }
         
         return view
@@ -40,5 +40,6 @@ struct DashbordView_Previews: PreviewProvider {
     static var previews: some View {
         DashbordView()
             .background(Color.white)
+            .environmentObject(TransactionManager())
     }
 }

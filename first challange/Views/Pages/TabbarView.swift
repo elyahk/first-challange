@@ -34,9 +34,5 @@ struct TabbarView_Previews: PreviewProvider {
         
         TabbarView()
             .previewDevice("iPhone SE (3rd generation)")
-        TabbarView()
-            .previewDevice("iPhone 13")
-        TabbarView()
-            .previewDevice("iPhone 14 Pro Max")
     }
 }

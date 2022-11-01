@@ -9,7 +9,8 @@ import SwiftUI
 
 struct HistoryView: View {
     @State var segmentedChoice = 0
-    
+    @EnvironmentObject var manager: TransactionManager
+
     var body: some View {
         VStack{
             Picker("", selection: $segmentedChoice){
@@ -18,7 +19,7 @@ struct HistoryView: View {
                 Text ("Incomes").tag(2)
             }.padding() .pickerStyle(SegmentedPickerStyle())
                         
-            TransactionListView(title: "History", transactions: [TransactionItem.example])
+            TransactionListView(title: "History", transactions: manager.transactions)
         }
     }
 }
@@ -26,5 +27,6 @@ struct HistoryView: View {
 struct HistoryView_Previews: PreviewProvider {
     static var previews: some View {
         HistoryView()
+            .environmentObject(TransactionManager())
     }
 }
