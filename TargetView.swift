@@ -8,43 +8,42 @@
 import SwiftUI
 
 struct TargetView: View {
-    @Environment(\.presentationMode) var presentationMode
-    @State var segmentedChoice = 0
+    @FocusState  var goalIsFocused: Bool
+    
     var body: some View {
         
-//        enter amount view
-//          ttile
-//        navigation bar
-//        transaction main view
-        NavigationStack {
-            VStack(alignment: .leading) {
-//                EnterAmountView(shouldShowTitle: false, title: "", amount: "")
-//                    .padding([.top], 10)
-                    
-                Spacer()
+        
+        VStack {
+            Text("How much do you want to spend in a month?")
+                .fontWeight(.bold)
+                .foregroundColor(Color.black)
+                .multilineTextAlignment(.center)
+                .font(.system(size: 30))
+                .lineSpacing(0.1)
+            
+            VStack {
+                TextField("Enter your goal!", text: .constant(""))
+                    .frame(height: 100)
+                    .keyboardType(.numberPad)
+                    .focused($goalIsFocused)
+                
             }
-            .background(Color(hex: .gray_light))
-            .navigationTitle("Enter your Target")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button("Cancel") {
-                        presentationMode.wrappedValue.dismiss()
-                    }
-                    .foregroundColor(Color.red)
-                }
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Save") {
-                        presentationMode.wrappedValue.dismiss()
-                    }
-                    .foregroundColor(Color.blue)
-                }
-            }
-            .toolbarBackground(.visible, for: .navigationBar)
+            .padding([.leading, .trailing], universalHeight(height: 20))
+            .background(Color.white)
+            Spacer()
         }
+        .toolbar {
+            ToolbarItemGroup(placement: .keyboard) {
+                Button("Done") {
+                    goalIsFocused = false
+                }
+            }
+        }
+        Spacer()
     }
+       
+    
+    
 }
 
 struct TargetView_Previews: PreviewProvider {
