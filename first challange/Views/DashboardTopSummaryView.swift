@@ -17,7 +17,7 @@ struct DashboardTopSummaryView: View {
     
     var body: some View {
         VStack{
-            HStack(alignment: .bottom) {
+            HStack(alignment: .center) {
                 Text(title)
                     .font(.system(size: 22))
                     .fontWeight(.semibold)
@@ -56,6 +56,7 @@ struct DashboardTopSummaryView: View {
 struct DashboardTopSummaryView_Previews: PreviewProvider {
     static var previews: some View {
         DashboardTopSummaryView()
+            .environmentObject(TransactionManager())
             
     }
 }
