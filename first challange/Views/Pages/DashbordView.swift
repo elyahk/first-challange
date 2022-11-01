@@ -20,6 +20,7 @@ struct DashbordView: View {
                 Spacer()
                 makeCircleButton()
                     .padding([.bottom], 40)
+                    .padding([.top], 20)
                     .ignoresSafeArea()
                 
             }

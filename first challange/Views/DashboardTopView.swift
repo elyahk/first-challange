@@ -43,6 +43,7 @@ struct DashboardTopView: View {
                     )
                     .padding([.bottom])
                 }
+                
             }
             .frame(maxWidth: .infinity)
             .background {

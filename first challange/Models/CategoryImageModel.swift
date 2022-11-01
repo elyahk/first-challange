@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CategoryImageModel {
+struct CategoryImageModel: Codable {
     let image: String
     let color: String
     let name: String

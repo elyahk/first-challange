@@ -34,7 +34,27 @@ class TransactionManager: ObservableObject {
     
     func addTransaction(_ transaction: TransactionItem) {
         transactions.insert(transaction, at: 0)
+        calculateAmounts()
+        saveToLocal()
+    }
+    
+    func calculateAmounts() {
         incomeAmount = calculateIncomeAmount()
         expenseAmount = calculateExpenseAmount()
+    }
+    
+    func saveToLocal() {
+        let encoder = JSONEncoder()
+        guard let data = try? encoder.encode(transactions) else { return }
+        
+        UserDefaults.standard.set(data, forKey: "transactions")
+    }
+    
+    func restoreFromLocal() {
+        let decoder = JSONDecoder()
+        guard let data = UserDefaults.standard.data(forKey: "transactions"), let items = try? decoder.decode([TransactionItem].self, from: data) else { return }
+        
+        transactions = items
+        calculateAmounts()
     }
 }

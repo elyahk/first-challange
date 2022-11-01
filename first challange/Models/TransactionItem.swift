@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TransactionItem: Identifiable {
+struct TransactionItem: Identifiable, Codable {
     let name: String
     let id = UUID()
     var money : Double

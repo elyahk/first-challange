@@ -29,13 +29,15 @@ struct DashboardTopSummaryView: View {
             
             if isIncome {
                 Text("\(manager.incomeAmount, specifier: "%.1f") $")
-                    .font(.system(size: 36))
+                    .font(.system(size: 28))
                     .fontWeight(.bold)
+                    .lineLimit(1)
                     .foregroundColor(Color(hex: model.color))
             } else {
                 Text("\(manager.expenseAmount, specifier: "%.1f") $")
-                    .font(.system(size: 36))
+                    .font(.system(size: 28))
                     .fontWeight(.bold)
+                    .lineLimit(1)
                     .foregroundColor(Color(hex: model.color))
             }
         }

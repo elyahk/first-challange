@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct TabbarView: View {
+    @EnvironmentObject var manager: TransactionManager
+    
     init() {
         UITabBar.appearance().backgroundColor = UIColor.systemGray6
     }
@@ -25,14 +27,17 @@ struct TabbarView: View {
                 }
         }
         .accentColor(Color.green)
+        .onAppear {
+            manager.restoreFromLocal()
+        }
         
     }
 }
 
 struct TabbarView_Previews: PreviewProvider {
     static var previews: some View {
-        
         TabbarView()
             .previewDevice("iPhone SE (3rd generation)")
+            .environmentObject(TransactionManager())
     }
 }
