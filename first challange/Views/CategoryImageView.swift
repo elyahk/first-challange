@@ -8,6 +8,7 @@
 import SwiftUI
 struct CategoryImageView: View {
     let model: CategoryImageModel
+    @State var fontSize = 28.0
     
     init(model: CategoryImageModel) {
         self.model = model
@@ -19,7 +20,7 @@ struct CategoryImageView: View {
                 .fill(Color(hex: model.color))
             Image(systemName: model.image)
                 .foregroundColor(.white)
-                .font(.system(size: 28.0))
+                .font(.system(size: fontSize))
         }
     }
 }

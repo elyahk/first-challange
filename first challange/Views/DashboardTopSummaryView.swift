@@ -8,28 +8,48 @@
 import SwiftUI
 
 struct DashboardTopSummaryView: View {
+    @State var title: String = "Incomes"
+    @State var value: String = "200"
+    @State var color: Color = .green
+    @State var model = CategoryImageModel(image: .incomeImage, color: .main_green_color, name: "")
+    @State var isIncome: Bool = true
+    @EnvironmentObject var manager: TransactionManager
+    
     var body: some View {
         VStack{
-            
-            HStack {
-                Image("IncomeIcon")
-                Text("Incomes")
-                    .font(.system(size: 24))
-                    .fontWeight(.medium)
-                    .padding([.leading])
-                Spacer()
-                Text("200 $")
-                    .font(.system(size: 24))
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.red)
+            HStack(alignment: .bottom) {
+                Text(title)
+                    .font(.system(size: 22))
+                    .fontWeight(.semibold)
+                
+                getImageView()
+                    .frame(width: 45.0, height: 45.0)
+//                    .padding([.leading])
             }
-            .padding([.leading, .trailing])
-            .frame(height: universalHeight(height: 65))
+            
+            if isIncome {
+                Text("\(manager.incomeAmount, specifier: "%.1f") $")
+                    .font(.system(size: 36))
+                    .fontWeight(.bold)
+                    .foregroundColor(Color(hex: model.color))
+            } else {
+                Text("\(manager.expenseAmount, specifier: "%.1f") $")
+                    .font(.system(size: 36))
+                    .fontWeight(.bold)
+                    .foregroundColor(Color(hex: model.color))
+            }
         }
+        .padding()
         .background {
-            RoundedRectangle(cornerRadius: 15)
+            RoundedRectangle(cornerRadius: 8)
                 .fill(Color(hex: "FCFCFE"))
         }
+    }
+    
+    func getImageView() -> CategoryImageView {
+        let imageView = CategoryImageView(model: model)
+        imageView.fontSize = 22.0
+        return imageView
     }
 }
 

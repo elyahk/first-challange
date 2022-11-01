@@ -15,6 +15,7 @@ struct first_challangeApp: App {
         WindowGroup {
             TabbarView()
                 .environmentObject(manager)
+                .preferredColorScheme(.light)
         }
     }
 }

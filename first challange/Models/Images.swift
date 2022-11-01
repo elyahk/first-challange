@@ -17,4 +17,6 @@ extension String {
     static let other = "line.3.horizontal.circle.fill"
     static let topviewIncomes = "custom.square.and.arrow.down.on.square.fill"
     static let topviewExpences = "custom.square.and.arrow.up.on.square.fill"
+    static let incomeImage = "plus.rectangle.fill"
+    static let expenseImage = "minus.rectangle.fill"
 }

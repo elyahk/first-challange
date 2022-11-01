@@ -29,7 +29,7 @@ struct DashbordView: View {
     func makeCircleButton() -> DashboardCircleButton {
         var view = DashboardCircleButton()
         view.save = { item in
-            manager.transactions.append(item)
+            manager.addTransaction(item)
         }
         
         return view
