@@ -11,13 +11,19 @@ struct TransactionMainView: View {
     @Environment(\.presentationMode) var presentationMode
     @State var segmentedChoice = 0
     @State var money: String = ""
-    
+    @State private var showingAlert = false
+
     var save: ((TransactionItem) -> Void)? = nil
     
     func getCategoryList() -> CategoryListView {
         var categoryList = CategoryListView(isExpense: $segmentedChoice)
         categoryList.selected = { category in
-            let transaction = TransactionItem(name: category.name, money: Double(money)!, category: category, isExpense: segmentedChoice == 0)
+            guard let money = Double(money) else {
+                showingAlert.toggle()
+                return
+            }
+            
+            let transaction = TransactionItem(name: category.name, money: money, category: category, isExpense: segmentedChoice == 0)
             save?(transaction)
             dismissView()
         }
@@ -41,7 +47,6 @@ struct TransactionMainView: View {
                 let amountView = EnterAmountView(shouldShowTitle: false, title: "", amount: $money)
                     .padding([.top], 10)
                 amountView
-//                emount
                 
                 Text("Category")
                     .font(.system(size: 22))
@@ -53,25 +58,29 @@ struct TransactionMainView: View {
                 Spacer()
             }
             .background(Color(hex: .gray_light))
-            .navigationTitle("Expense")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button("Cancel") {
-                        dismissView()
-                    }
-                    .foregroundColor(Color.red)
-                }
+//            .navigationTitle("Expense")
+//            .navigationBarTitleDisplayMode(.inline)
+//            .toolbar {
+//                ToolbarItem(placement: .navigationBarLeading) {
+//                    Button("Cancel") {
+//                        dismissView()
+//                    }
+//                    .foregroundColor(Color.red)
+//                }
+//            }
+//            .toolbar {
+//                ToolbarItem(placement: .navigationBarTrailing) {
+//                    Button("Save") {
+//                        presentationMode.wrappedValue.dismiss()
+//                    }
+//                    .foregroundColor(Color.blue)
+//                }
+//            }
+//            .toolbarBackground(.visible, for: .navigationBar)
+            .alert("You need to add amount in order to save transaction", isPresented: $showingAlert) {
+                        Button("OK", role: .cancel) {
+                        }
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Save") {
-                        presentationMode.wrappedValue.dismiss()
-                    }
-                    .foregroundColor(Color.blue)
-                }
-            }
-            .toolbarBackground(.visible, for: .navigationBar)
         }
     }
     

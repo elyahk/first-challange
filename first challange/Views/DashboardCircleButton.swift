@@ -65,8 +65,7 @@ struct DashboardCircleButton: View {
                 self.circleTapped = false
             }
         }
-        
-        .fullScreenCover(isPresented: $showingSheet) {
+        .sheet(isPresented: $showingSheet) {
            makeTransactionMainView()
         }
     }
