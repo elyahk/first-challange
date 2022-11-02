@@ -18,6 +18,8 @@ struct TransactionMainView: View {
     func getCategoryList() -> CategoryListView {
         var categoryList = CategoryListView(isExpense: $segmentedChoice)
         categoryList.selected = { category in
+            money = money.replacingOccurrences(of: ",", with: ".")
+            
             guard let money = Double(money) else {
                 showingAlert.toggle()
                 return

@@ -13,6 +13,7 @@ struct TransactionItem: Identifiable, Codable {
     var money : Double
     let category: CategoryImageModel
     var isExpense: Bool = false
+    var date: Date = Date()
  
     static var example: TransactionItem {
         TransactionItem(name: "Food", money: 12, category: CategoryImageModel(image: "bell", color: .main_red_color, name: "Shopping"))

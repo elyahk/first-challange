@@ -11,8 +11,6 @@ struct TargetView: View {
     @FocusState  var goalIsFocused: Bool
     
     var body: some View {
-        
-        
         VStack {
             Text("How much do you want to spend in a month?")
                 .fontWeight(.bold)
@@ -25,6 +23,7 @@ struct TargetView: View {
                 TextField("Enter your goal!", text: .constant(""))
                     .frame(height: 100)
                     .keyboardType(.numberPad)
+                    .font(.system(size: 32.0, weight: .bold))
                     .focused($goalIsFocused)
                 
             }
@@ -41,9 +40,6 @@ struct TargetView: View {
         }
         Spacer()
     }
-       
-    
-    
 }
 
 struct TargetView_Previews: PreviewProvider {

@@ -24,13 +24,13 @@ struct TransactionItemView: View {
                 Text(transaction.name)
                     .font(.system(size: 17.0, weight: .semibold))
                     .multilineTextAlignment(.leading)
-                Text(transaction.name)
-                    .font(.system(size: 15.0, weight: .regular))
+                Text(transaction.date, style: .date)
+                    .font(.system(size: 12.0, weight: .regular))
                     .multilineTextAlignment(.leading)
             }
             Spacer()
             Text(String(transaction.money))
-                .font(.system(size: 17.0, weight: .regular))
+                .font(.system(size: 24.0, weight: .semibold))
                 .foregroundColor(Color(hex: transaction.moneyHexColor()))
         }
     }

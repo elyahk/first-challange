@@ -48,7 +48,7 @@ struct DashboardTopView: View {
             .frame(maxWidth: .infinity)
             .background {
                 Rectangle()
-                    .fill(Color(UIColor.systemGroupedBackground))
+                    .fill(Color(hex: .dashboard_plus_button_main_color))
             }
         }
     }
